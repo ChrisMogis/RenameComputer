@@ -1,3 +1,9 @@
+################################################################################################
+# This script is used to change computer.                                                      #
+# Editor : Christopher Mogis                                                                   #
+# Date : 24/11/2022                                                                            #
+# Version 1.0 - Convert select action by drop down menu                                        #
+################################################################################################
 
 #Create Logs Directory
 New-Item -Force -Path "C:\Windows\Temp\Logs" -ItemType Directory
