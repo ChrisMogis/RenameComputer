@@ -1,5 +1,5 @@
 ################################################################################################
-# This script is used to change computer.                                                      #
+# This script is used to change computer name with Micrososft Intune for exemple.              #
 # Editor : Christopher Mogis                                                                   #
 # Date : 24/11/2022                                                                            #
 # Version 1.0 - Convert select action by drop down menu                                        #
