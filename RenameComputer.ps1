@@ -11,7 +11,7 @@ This script is used to change computer name with Microsoft Intune
 #Variables
     $Date = Get-Date
     $CurrentName = (Get-CimInstance -ClassName Win32_ComputerSystem).Name
-    $Suffix = "W0010"
+    $Prefix = "W0010"
     $Logs = "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\RenameComputer.log"
 
 #Delete old Logs files
@@ -35,8 +35,8 @@ This script is used to change computer name with Microsoft Intune
 
 #Change Computer Name
     Write-Output "$($Date) : The script change the computer name because it's not compliant with the naming convention" | Tee-Object -FilePath $Logs -Append
-    Rename-Computer -NewName "$($Suffix)$($Serial)" -Force
-    Write-Output "$($Date) : The new computer name is $($Suffix)$($Serial)" | Tee-Object -FilePath $Logs -Append
+    Rename-Computer -NewName "$($Prefix)$($Serial)" -Force
+    Write-Output "$($Date) : The new computer name is $($Prefix)$($Serial)" | Tee-Object -FilePath $Logs -Append
         
 #Send message to user for request computer restart & reboot
     Shutdown -r -t 120 -f -c "Your administrator has implemented changes. To finalize the process, we will reboot your computer in 2 minutes."
