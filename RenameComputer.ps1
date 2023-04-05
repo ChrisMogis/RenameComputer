@@ -11,7 +11,7 @@ This script is used to change computer name with Microsoft Intune
 #Variables
     $Date = Get-Date
     $CurrentName = (Get-CimInstance -ClassName Win32_ComputerSystem).Name
-    $Prefix = "W0010"
+    $Prefix = "CCMT"
     $Logs = "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\RenameComputer.log"
 
 #Delete old Logs files
